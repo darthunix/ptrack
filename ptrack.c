@@ -62,6 +62,10 @@ PtrackMap	ptrack_map = NULL;
 uint64		ptrack_map_size;
 int			ptrack_map_size_tmp;
 
+#ifdef GP_TABLESPACE_VERSION_DIRECTORY
+#define TABLESPACE_VERSION_DIRECTORY GP_TABLESPACE_VERSION_DIRECTORY
+#endif
+
 static copydir_hook_type prev_copydir_hook = NULL;
 static mdwrite_hook_type prev_mdwrite_hook = NULL;
 static mdextend_hook_type prev_mdextend_hook = NULL;
